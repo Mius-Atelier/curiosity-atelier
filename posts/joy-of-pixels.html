@@ -12,28 +12,28 @@
 
     <header class="header">
         <nav class="nav container">
-            <a href="index.html" class="nav__logo">Curiosity Atelier</a>
+            <a href="../index.html" class="nav__logo">Curiosity Atelier</a>
             <div class="nav__menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">HOME</a></li> <!-- CHANGED href, REMOVED active-link -->
-                    <li class="nav__item"><a href="index.html#portfolio" class="nav__link">PORTFOLIO</a></li> <!-- Points to portfolio on homepage -->
-                    <li class="nav__item"><a href="index.html#games" class="nav__link">GAMES</a></li> <!-- Points to games on homepage -->
-                    <li class="nav__item"><a href="blog.html" class="nav__link active-link">BLOG</a></li> <!-- ADDED active-link -->
-                    <li class="nav__item"><a href="index.html#about" class="nav__link">ABOUT</a></li> <!-- Points to about on homepage -->
+                    <li class="nav__item"><a href="../index.html" class="nav__link">HOME</a></li> <!-- CHANGED href, REMOVED active-link -->
+                    <li class="nav__item"><a href="../index.html#portfolio" class="nav__link">PORTFOLIO</a></li> <!-- Points to portfolio on homepage -->
+                    <li class="nav__item"><a href="../index.html#games" class="nav__link">GAMES</a></li> <!-- Points to games on homepage -->
+                    <li class="nav__item"><a href="../blog.html" class="nav__link active-link">BLOG</a></li> <!-- ADDED active-link -->
+                    <li class="nav__item"><a href="../index.html#about" class="nav__link">ABOUT</a></li> <!-- Points to about on homepage -->
                 </ul>
             </div>
             <div class="nav__actions">
                 <div class="theme-toggle">
                     <i class="fas fa-sun theme-toggle__icon"></i>
                 </div>
-                <a href="index.html#portfolio" class="button button--primary nav__button">
+                <a href="../index.html#portfolio" class="button button--primary nav__button">
                     BE CURIOUS
                 </a>
             </div>
         </nav>
     </header>
 
-    <main class="main-content">
+    <main class="main-content single-post-page-main">
         <article class="single-post section">
             <div class="container">
                 <!-- Post Header: Title, Meta (Date, Author, Category) -->
@@ -49,7 +49,7 @@
                         <!-- <span><i class="far fa-clock"></i> 5 min read</span> -->
                     </div>
                     <!-- Optional: Featured Image for the Post -->
-                    <img src="https://img.freepik.com/free-vector/pixel-art-background-autumnal-landscape_23-2149597073.jpg?t=st=1746680549~exp=1746684149~hmac=546d4d808f2829ebe7a89deda4f8fe9c91b9216b33b4695eba9db22bd7feb65d&w=1380" alt="A cozy pixel art world" class="single-post__featured-image">
+                    <img src="https://img.freepik.com/free-photo/8-bit-graphics-pixels-scene-with-person-walking-dog-park_23-2151120928.jpg?t=st=1746681943~exp=1746685543~hmac=fb7f9d63ad619b1a250e0d6982966c6dc060c3a4e13d416cf414c24e5a3f8a2d&w=1380" alt="A cozy pixel art world" class="single-post__featured-image">
                     <!-- Create a placeholder img/blog-thumbnails/joy-of-pixels-banner.jpg or use one from unsplash -->
                 </header>
 
@@ -104,12 +104,18 @@
         </article>
     </main>
 
+<!-- ==================== FOOTER ==================== -->
     <footer class="footer section">
-        <!-- ... Your existing footer ... -->
+        <div class="footer__container container">
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © <span id="currentYear"></span> Curiosity Atelier. All Rights Reserved.
+                </p>
+                <p class="footer__credits">
+                    Inspired by curiosity & code.
+                </p>
+            </div>
+        </div>
     </footer>
-
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>

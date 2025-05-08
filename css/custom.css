@@ -1481,3 +1481,13 @@ img {
   border-top: 1px dotted var(--border-color);
   padding-top: var(--mb-1);
 }
+
+/* Single Post Content */
+.single-post-page-main {
+  padding-top: var(--header-height);
+}
+
+.single-post-page-main .single-post.section {
+  padding-top: 3rem; /* Or your desired spacing for the content WITHIN the post page, AFTER the main offset */
+}
+
