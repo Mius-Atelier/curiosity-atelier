@@ -1287,3 +1287,197 @@ img {
 .blog-archive-title .section__header {
   margin-bottom: 0; /* Remove bottom margin if grid starts immediately */
 }
+
+/* ==================== SINGLE BLOG POST STYLES ==================== */
+.single-post.section {
+  padding-top: 3rem; /* Or adjust as needed */
+  padding-bottom: 4rem;
+}
+
+.single-post__header {
+  text-align: center;
+  margin-bottom: var(--mb-2-5);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--mb-2);
+}
+
+.single-post__category {
+  color: var(--accent-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--mb-0-75);
+}
+
+.single-post__title {
+  font-size: var(--h1-font-size); /* Or a specific large size like 2.8rem */
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+  line-height: 1.2;
+  margin-bottom: var(--mb-1);
+}
+
+.single-post__meta {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  margin-bottom: var(--mb-2);
+}
+.single-post__meta span {
+  margin: 0 0.25em;
+}
+.single-post__meta i {
+  margin-right: 0.5em;
+  color: var(--accent-color); /* Color for meta icons */
+}
+.single-post__meta-divider {
+  /* Already styled from blog card meta if you used same class */
+}
+
+.single-post__featured-image {
+  width: 100%;
+  max-height: 450px; /* Control max height */
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+  margin-top: var(--mb-1-5);
+  box-shadow: var(--box-shadow-light);
+}
+
+.single-post__content {
+  max-width: 800px; /* Optimal reading width for text */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.single-post__content h2 {
+  font-size: var(--h2-font-size);
+  margin-top: var(--mb-2-5);
+  margin-bottom: var(--mb-1);
+  color: var(--title-color);
+}
+.single-post__content h3 {
+  font-size: var(--h3-font-size);
+  margin-top: var(--mb-2);
+  margin-bottom: var(--mb-0-75);
+  color: var(--title-color);
+}
+
+.single-post__content p {
+  font-size: var(--normal-font-size);
+  line-height: 1.7;
+  color: var(--text-color);
+  margin-bottom: var(--mb-1-5);
+}
+
+.single-post__content a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+.single-post__content a:hover {
+  color: var(--accent-color-alt);
+  text-decoration: none;
+}
+
+/* Styled Quote (reusing .card-styled for base) */
+.styled-quote {
+  /* .card-styled provides background, padding, border-radius, box-shadow */
+  margin-top: var(--mb-2);
+  margin-bottom: var(--mb-2-5);
+  padding: 2rem 2.5rem; /* Custom padding for quote block */
+  text-align: center;
+  position: relative;
+  border-left: 5px solid var(--accent-color); /* Accent border */
+  background-color: var(--body-bg-color); /* Slightly different bg from main page content */
+}
+.styled-quote p {
+  font-size: 1.2rem; /* Slightly larger for quote */
+  font-style: italic;
+  color: var(--title-color); /* Darker text for emphasis */
+  line-height: 1.6;
+  margin: 0;
+}
+.styled-quote__icon {
+  font-size: 3rem;
+  color: var(--accent-color);
+  font-weight: var(--font-bold);
+  line-height: 1;
+  position: absolute;
+  opacity: 0.7;
+}
+.styled-quote__icon--start {
+  top: 0.5rem;
+  left: 0.5rem;
+}
+.styled-quote__icon--end {
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+
+
+/* Styled Bullet List */
+.styled-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: var(--mb-2);
+}
+.styled-list li {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  margin-bottom: var(--mb-0-75);
+  position: relative;
+  padding-left: 1.8em; /* Space for the custom bullet */
+  line-height: 1.6;
+}
+.styled-list__bullet {
+  position: absolute;
+  left: 0;
+  top: 0.35em; /* Adjust vertical alignment */
+  width: 0.8em;
+  height: 0.8em;
+  background-color: var(--accent-color); /* Your bullet color */
+  border-radius: 50%;
+  /* Optional: Add a border to the bullet like in the example */
+  /* border: 2px solid var(--title-color); */
+  /* background-color: transparent; */ /* If using border style */
+}
+
+.styled-list--two-columns {
+  column-count: 1; /* Default to one column */
+}
+@media screen and (min-width: 768px) {
+  .styled-list--two-columns {
+      column-count: 2;
+      column-gap: 2rem;
+  }
+  .styled-list--two-columns li {
+      break-inside: avoid-column; /* Prevents list items from breaking across columns */
+  }
+}
+
+/* Image Block within Post */
+.single-post__image-block {
+  margin: var(--mb-2) 0;
+  text-align: center;
+}
+.single-post__image-block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow-light);
+  margin-bottom: var(--mb-0-5);
+}
+.single-post__image-block figcaption {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  font-style: italic;
+}
+
+/* Footnote */
+.single-post__footnote {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  font-style: italic;
+  margin-top: var(--mb-2-5);
+  border-top: 1px dotted var(--border-color);
+  padding-top: var(--mb-1);
+}

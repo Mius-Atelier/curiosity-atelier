@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Joy of Pixels: Crafting Cozy Worlds - Curiosity Atelier</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">Curiosity Atelier</a>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">HOME</a></li> <!-- CHANGED href, REMOVED active-link -->
+                    <li class="nav__item"><a href="index.html#portfolio" class="nav__link">PORTFOLIO</a></li> <!-- Points to portfolio on homepage -->
+                    <li class="nav__item"><a href="index.html#games" class="nav__link">GAMES</a></li> <!-- Points to games on homepage -->
+                    <li class="nav__item"><a href="blog.html" class="nav__link active-link">BLOG</a></li> <!-- ADDED active-link -->
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">ABOUT</a></li> <!-- Points to about on homepage -->
+                </ul>
+            </div>
+            <div class="nav__actions">
+                <div class="theme-toggle">
+                    <i class="fas fa-sun theme-toggle__icon"></i>
+                </div>
+                <a href="index.html#portfolio" class="button button--primary nav__button">
+                    BE CURIOUS
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <article class="single-post section">
+            <div class="container">
+                <!-- Post Header: Title, Meta (Date, Author, Category) -->
+                <header class="single-post__header">
+                    <p class="single-post__category">Game Dev</p>
+                    <h1 class="single-post__title">The Joy of Pixels: Crafting Cozy Worlds</h1>
+                    <div class="single-post__meta">
+                        <span><i class="far fa-calendar-alt"></i> August 15, 2023</span>
+                        <span class="single-post__meta-divider">•</span>
+                        <span><i class="far fa-user"></i> Miu A.</span>
+                        <!-- Optional: Reading time -->
+                        <!-- <span class="single-post__meta-divider">•</span> -->
+                        <!-- <span><i class="far fa-clock"></i> 5 min read</span> -->
+                    </div>
+                    <!-- Optional: Featured Image for the Post -->
+                    <img src="img/blog-thumbnails/joy-of-pixels-banner.jpg" alt="A cozy pixel art world" class="single-post__featured-image">
+                    <!-- Create a placeholder img/blog-thumbnails/joy-of-pixels-banner.jpg or use one from unsplash -->
+                </header>
+
+                <div class="single-post__content">
+                    <!-- Large Quote Block -->
+                    <blockquote class="styled-quote card-styled">
+                        <span class="styled-quote__icon styled-quote__icon--start">“</span>
+                        <p>
+                            There's a unique magic in pixel art, a delightful alchemy where tiny squares transform into sprawling landscapes,
+                            charming characters, and worlds brimming with nostalgia and warmth. It's more than just a style; it's a portal
+                            to simpler times and boundless imagination.
+                        </p>
+                        <span class="styled-quote__icon styled-quote__icon--end">”</span>
+                    </blockquote>
+
+                    <p>Welcome, fellow dreamers and creators, to a little corner of the internet where we celebrate the humble pixel. In an era of hyper-realistic graphics, the enduring appeal of pixel art speaks volumes. It's accessible, it's evocative, and it’s the perfect medium for crafting those "cozy" game experiences that feel like a warm hug on a rainy day. At Curiosity Atelier, we find immense joy in this art form, and we want to share why it's so special for building worlds you can get lost in.</p>
+
+                    <p>So, what is it about these tiny squares that captivates us? Perhaps it's the inherent challenge – creating expressive art within constraints. Or maybe it's the way our minds fill in the gaps, participating in the creation of the image. Whatever the reason, pixel art has a unique power to convey emotion and atmosphere with surprising depth.</p>
+
+                    <!-- Bulleted List Section -->
+                    <h2>Key Ingredients for a Cozy Pixel World</h2>
+                    <p>Crafting a truly "cozy" pixel art game involves more than just the visuals. It's about weaving together elements that evoke comfort, safety, and a gentle sense of progression. Here are some ingredients we find essential:</p>
+
+                    <ul class="styled-list styled-list--two-columns">
+                        <li><span class="styled-list__bullet"></span>A Soothing Color Palette: Think soft pastels, earthy tones, and gentle gradients.</li>
+                        <li><span class="styled-list__bullet"></span>Charming Character Sprites: Expressive animations, even with limited pixels, bring characters to life.</li>
+                        <li><span class="styled-list__bullet"></span>Inviting Environments: From rustling pixel leaves to softly glowing lanterns, details matter.</li>
+                        <li><span class="styled-list__bullet"></span>Non-Stressful Gameplay: Focus on exploration, creation, or gentle puzzles rather than high-stakes conflict.</li>
+                        <li><span class="styled-list__bullet"></span>Ambient Soundscapes: Calming music and subtle sound effects enhance the atmosphere.</li>
+                        <li><span class="styled-list__bullet"></span>A Sense of Belonging: Creating a space where the player feels welcome and can make their mark.</li>
+                    </ul>
+
+                    <h2>The Process: From Blank Canvas to Pixel Paradise</h2>
+                    <p>Our journey into a new pixel world often starts with a simple feeling or a core mechanic we want to explore. Maybe it's the satisfaction of tending a digital garden, or the quiet joy of discovering hidden nooks in a pixelated forest. We sketch, we iterate, and slowly, block by block, the world takes shape. Tools like Aseprite become our digital chisels, allowing us to meticulously place each pixel until the vision comes alive.</p>
+
+                    <figure class="single-post__image-block">
+                        <img src="img/blog-thumbnails/pixel-art-process.jpg" alt="Pixel art being created on a screen">
+                        <figcaption>The meticulous yet rewarding process of pixel-by-pixel creation.</figcaption>
+                    </figure>
+                    <!-- Create a placeholder img/blog-thumbnails/pixel-art-process.jpg or use one from unsplash -->
+
+                    <p>The beauty of pixel art is its deceptive simplicity. While it might look easy, achieving a polished and appealing aesthetic requires a good understanding of color theory, animation principles, and how to convey detail with minimal information. It’s a constant learning process, and every new project teaches us something new about this wonderful medium.</p>
+
+                    <p>We hope this little glimpse into "The Joy of Pixels" inspires you. Whether you're a seasoned pixel artist or just curious about dipping your toes into this charming world, remember that every great creation starts with a single pixel, and a spark of imagination.</p>
+
+                    <!-- Footnote/Disclaimer -->
+                    <p class="single-post__footnote">
+                        * All pixel art examples shown are illustrative and for inspirational purposes. Actual game assets may vary. Stay curious!
+                    </p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer section">
+        <!-- ... Your existing footer ... -->
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
