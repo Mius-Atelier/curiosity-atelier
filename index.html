@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosity Atelier - AI & Game Dev</title>
+    <link rel="stylesheet" href="static/custom.css"> {/* <<< UPDATED LINK */}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Curiosity Atelier</a>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">HOME</a></li>
+                    <li class="nav__item"><a href="#portfolio" class="nav__link">PORTFOLIO</a></li>
+                    <li class="nav__item"><a href="#games" class="nav__link">GAMES</a></li>
+                    <li class="nav__item"><a href="blog.html" class="nav__link">BLOG</a></li> <!-- CHANGED href -->
+                    <li class="nav__item"><a href="#about" class="nav__link">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="nav__actions">
+                <div class="theme-toggle">
+                    <i class="fas fa-sun theme-toggle__icon"></i>
+                </div>
+                <a href="#portfolio" class="button button--primary nav__button">
+                    BE CURIOUS
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero section" id="home">
+            <div class="hero__container container grid">
+                <aside class="hero__sidebar">
+                    <div class="profile-card">
+                        <div class="profile-card__image-container">
+                            <img src="https://pbs.twimg.com/profile_images/1910753844054614016/039uk8sG_400x400.jpg" alt="Curiosity Atelier Logo" class="profile-card__img"> {/* <<< UPDATED IMAGE */}
+                        </div>
+                        <h2 class="profile-card__name">Miu</h2>
+                        <p class="profile-card__subtitle">AI & Game Dev Explorers</p>
+                        <hr class="profile-card__divider">
+                        <div class="profile-card__socials">
+                            <a href="https://github.com/Mius-Atelier" target="_blank" aria-label="GitHub" class="profile-card__social-link"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" aria-label="Itch.io" class="profile-card__social-link"><i class="fab fa-itch-io"></i></a>
+                            <a href="https://x.com/Mius_Atelier" target="_blank" aria-label="X" class="profile-card__social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://www.youtube.com/@mius.atelier" target="_blank" aria-label="YouTube" class="profile-card__social-link"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                        <hr class="profile-card__divider">
+                        <ul class="profile-card__info">
+                            <li><span>HOBBY:</span> <span>Art and Food</span></li>
+                            <li><span>COLOR:</span> <span>❤️️🧡💛</span></li>
+                            <li><span>FOCUS:</span> <span>AI, Pixel Games</span></li>
+                        </ul>
+                        <a href="#contact" class="button button--primary profile-card__contact-btn">
+                            GET IN TOUCH <i class="fas fa-envelope button__icon"></i>
+                        </a>
+                    </div>
+                </aside>
+
+                <div class="hero__main-content">
+                    <div class="hero__text-content">
+                        <p class="hero__greeting">WELCOME, EXPLORER!</p>
+                        <h1 class="hero__title">Dive into Our Universe of Code & Creativity!</h1>
+                        <a href="#games" class="button button--primary hero__cta-btn">
+                            LATEST GAME <i class="fas fa-play button__icon"></i>
+                        </a>
+                    </div>
+                    <div class="hero__stats">
+                        <div class="stat-card">
+                            <h3 class="stat-card__number">10+</h3>
+                            <p class="stat-card__label">AI EXPERIMENTS</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="stat-card__number">3+</h3>
+                            <p class="stat-card__label">GAMES RELEASED</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="stat-card__number">20+</h3>
+                            <p class="stat-card__label">BLOG POSTS</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
+                <!-- ==================== OUR PHILOSOPHY ==================== -->
+                <section class="philosophy section" id="philosophy">
+                  <div class="container">
+                      <div class="section__header">
+                          <h2 class="section__title">Our Philosophy</h2>
+                          <div class="section__header-line"></div>
+                          <span class="section__number">01</span>
+                      </div>
+      
+                      <div class="philosophy__content card-styled">
+                          <span class="philosophy__quote philosophy__quote--start">“</span>
+                          <p>
+                              At Curiosity Atelier, we believe in the boundless joy of discovery. 
+                              We're driven by an insatiable curiosity to explore new ideas, 
+                              experiment with emerging technologies, and weave them into 
+                              delightful digital experiences. Every project is a new adventure, 
+                              a chance to learn, and an opportunity to create something 
+                              wonderfully unique.
+                          </p>
+                          <span class="philosophy__quote philosophy__quote--end">”</span>
+                      </div>
+                  </div>
+              </section>
+       
+              <!-- ==================== VISUAL JOURNEYS (YOUTUBE) ==================== -->
+              <section class="video-showcase section" id="video-showcase">
+                  <div class="container">
+                      <div class="section__header">
+                          <h2 class="section__title">Visual Journeys</h2>
+                          <div class="section__header-line"></div>
+                          <span class="section__number">02</span>
+                      </div>
+      
+                      <a href="https://www.youtube.com/@mius.atelier" target="_blank" rel="noopener noreferrer" class="video-showcase__link card-styled">
+                          <img src="https://images.unsplash.com/photo-1611162616805-6UX729507279?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8eW91dHViZSUyMGJhbm5lcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="Link to Curiosity Atelier YouTube Channel" class="video-showcase__thumbnail">
+                          <!-- You can replace the src above with your desired thumbnail image -->
+                          <div class="video-showcase__overlay">
+                              <div class="video-showcase__play-button">
+                                  <i class="fas fa-play"></i>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+              </section>
+
+                      <!-- ==================== MEET PROFESSOR QUINTON ==================== -->
+        <section class="quinton-intro section" id="professor-quinton">
+          <div class="container">
+              <div class="section__header">
+                  <h2 class="section__title">Meet Professor Quinton</h2>
+                  <div class="section__header-line"></div>
+                  <span class="section__number">03</span>
+              </div>
+
+              <div class="testimonial-card card-styled">
+                  <div class="testimonial-card__image-wrapper">
+                      <img src="https://img.freepik.com/free-vector/spring-red-egg-painted-icon_18591-82784.jpg?t=st=1746639627~exp=1746643227~hmac=32f8610d3cfb3082f456057b6fe23048faacd2e0ce59909c06cd2215d0de41d2&w=900&q=80" alt="Professor Quinton" class="testimonial-card__image"> {/* <<< UPDATED IMAGE */}
+                  </div>
+                  <h3 class="testimonial-card__name">Professor Quinton</h3>
+                  <p class="testimonial-card__role">Stream Host of the Atelier</p>
+                  <blockquote class="testimonial-card__quote">
+                      <p>
+                          Conceived from the wisdom of ages, Professor Quinton is an educational AI 
+                          on a delightful mission: to guide humans back towards curiosity and creativity. 
+                          His design draws inspiration from the nurturing principles of Montessori and 
+                          the timeless rhetoric of Quintilian.
+                          With a sprinkle of humor and a dash of charm, he invites you to embark on a journey of exploration.
+                      </p>
+                  </blockquote>
+              </div>
+          </div>
+      </section>
+
+
+                      <!-- ==================== FUNSIES (MINI GAMES) ==================== -->
+        <section class="funsies section" id="funsies">
+            <div class="container">
+                <div class="section__header section__header--with-button">
+                    <h2 class="section__title">Funsies</h2>
+                    <div class="section__header-line"></div>
+                    <a href="#all-games" class="button button--outline funsies__show-more-btn">
+                        >> Show more
+                    </a>
+                </div>
+
+                <div class="funsies__grid">
+                    <!-- Game Card 1: Cooking Game -->
+                    <div class="service-card card-styled">
+                        <div class="service-card__icon-wrapper">
+                            <i class="fas fa-utensils service-card__icon"></i>
+                        </div>
+                        <h3 class="service-card__title">Pho-nomenal Feasts</h3>
+                        <p class="service-card__description">
+                            Learn cooking Vietnamese food while having fun! Master delicious recipes step-by-step.
+                        </p>
+                        <a href="#" class="service-card__link">
+                            START COOKING <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Game Card 2: Coding Game -->
+                    <div class="service-card card-styled">
+                        <div class="service-card__icon-wrapper">
+                            <i class="fas fa-laptop-code service-card__icon"></i>
+                        </div>
+                        <h3 class="service-card__title">Code Critters</h3>
+                        <p class="service-card__description">
+                            Guide your cute critters through coding challenges! A fun intro to programming logic.
+                        </p>
+                        <a href="#" class="service-card__link">
+                            DEBUG NOW <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Game Card 3: History Game -->
+                    <div class="service-card card-styled">
+                        <div class="service-card__icon-wrapper">
+                            <i class="fas fa-landmark service-card__icon"></i>
+                        </div>
+                        <h3 class="service-card__title">History Hijinks</h3>
+                        <p class="service-card__description">
+                            Travel through time and unscramble mixed-up historical events. Silly, surprising, and secretly educational!
+                        </p>
+                        <a href="#" class="service-card__link">
+                            TIME TRAVEL <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Game Card 4: Pixel Planet Game -->
+                    <div class="service-card card-styled">
+                        <div class="service-card__icon-wrapper">
+                           <i class="fas fa-rocket service-card__icon"></i>
+                        </div>
+                        <h3 class="service-card__title">Pixel Planet Pioneers</h3>
+                        <p class="service-card__description">
+                            Design and build your own cozy pixel art planet! Learn about ecosystems in a creative sandbox.
+                        </p>
+                        <a href="#" class="service-card__link">
+                            EXPLORE WORLDS <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== ALL GAMES ==================== -->
+                <!-- ==================== LATEST POSTS (BLOG) ==================== -->
+                <section class="latest-posts section" id="blog">
+                  <div class="container">
+                      <div class="section__header section__header--with-button">
+                          <h2 class="section__title">Latest Posts</h2>
+                          <div class="section__header-line"></div>
+                          <a href="#all-posts" class="button button--outline posts__show-more-btn">
+                              >> Show more
+                          </a>
+                          <!-- <span class="section__number">05</span>  Adjust if numbering -->
+                      </div>
+      
+                      <div class="posts__grid">
+                          <!-- Blog Post Card 1 -->
+                          <article class="post-card card-styled">
+                              <a href="#" class="post-card__image-link">
+                                  <img src="https://images.unsplash.com/photo-1580894908361-967195033215?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGl4ZWwlMjBhcnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60" alt="Blog post thumbnail for The Joy of Pixels" class="post-card__image">
+                              </a>
+                              <div class="post-card__content">
+                                  <p class="post-card__category">Game Dev</p>
+                                  <h3 class="post-card__title">
+                                      <a href="#">The Joy of Pixels: Crafting Cozy Worlds</a>
+                                  </h3>
+                                  <div class="post-card__meta">
+                                      <span>15 AUGUST</span>
+                                      <span class="post-card__meta-divider">•</span>
+                                      <span>10:30</span>
+                                      <span class="post-card__meta-divider">•</span>
+                                      <span>MIU A.</span>
+                                  </div>
+                              </div>
+                          </article>
+      
+                          <!-- Blog Post Card 2 -->
+                          <article class="post-card card-styled">
+                              <a href="#" class="post-card__image-link">
+                                  <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YWklMjBhcnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60" alt="Blog post thumbnail for AI & Creativity" class="post-card__image">
+                              </a>
+                              <div class="post-card__content">
+                                  <p class="post-card__category">AI Insights</p>
+                                  <h3 class="post-card__title">
+                                      <a href="#">AI & Creativity: Our Latest Experiments</a>
+                                  </h3>
+                                  <div class="post-card__meta">
+                                      <span>10 AUGUST</span>
+                                      <span class="post-card__meta-divider">•</span>
+                                      <span>14:15</span>
+                                      <span class="post-card__meta-divider">•</span>
+                                      <span>PROF. Q.</span>
+                                  </div>
+                              </div>
+                          </article>
+                          
+                          <!-- Add more post-card articles here if needed (e.g., for 3 or 4 column layout) -->
+      
+                      </div>
+                  </div>
+              </section>
+
+            <!-- ==================== CONTACT SECTION ==================== -->
+            <section class="contact section" id="contact">
+              <div class="contact__bg"> <!-- For the dark background -->
+                  <div class="contact__container container grid">
+                      <div class="contact__content-left">
+                          <p class="contact__small-title">Get in Touch</p>
+                          <h2 class="contact__headline">Let's Create Something Curious!</h2>
+                          <div class="contact__socials">
+                              <a href="https://github.com/Mius-Atelier" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="contact__social-link">
+                                  <i class="fab fa-github"></i>
+                              </a>
+                              <a href="https://x.com/Mius_Atelier" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="contact__social-link">
+                                  <i class="fa-brands fa-x-twitter"></i>
+                              </a>
+                              <a href="https://www.youtube.com/@mius.atelier" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="contact__social-link">
+                                  <i class="fab fa-youtube"></i>
+                              </a>
+                              <a href="https://www.pixiv.net/en/users/115520810" target="_blank" rel="noopener noreferrer" aria-label="Pixiv" class="contact__social-link">
+                                  <i class="fas fa-paint-brush"></i>
+                              </a>
+                              <!-- Add other relevant social icons here if desired -->
+                          </div>
+                      </div>
+  
+                      <div class="contact__form-right">
+                          <form action="#" method="POST" class="contact__form">
+                              <div class="contact__form-group contact__form-group--half">
+                                  <input type="text" id="firstName" name="firstName" required placeholder=" ">
+                                  <label for="firstName">First Name</label>
+                              </div>
+                              <div class="contact__form-group contact__form-group--half">
+                                  <input type="text" id="lastName" name="lastName" required placeholder=" ">
+                                  <label for="lastName">Last Name</label>
+                              </div>
+                              <div class="contact__form-group">
+                                  <input type="email" id="email" name="email" required placeholder=" ">
+                                  <label for="email">Email Address</label>
+                              </div>
+                              <div class="contact__form-group">
+                                  <input type="text" id="subject" name="subject" required placeholder=" ">
+                                  <label for="subject">Subject</label>
+                              </div>
+                              <div class="contact__form-group">
+                                  <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                                  <label for="message">Message</label>
+                              </div>
+                              <button type="submit" class="button button--primary contact__submit-btn">
+                                  Send Message <i class="fas fa-paper-plane button__icon"></i>
+                              </button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </section>
+              
+          </main> <!-- This should be the end of your main content -->
+      
+          <!-- ==================== FOOTER ==================== -->
+          <footer class="footer section">
+              <div class="footer__container container">
+                  <div class="footer__bottom">
+                      <p class="footer__copyright">
+                          © <span id="currentYear"></span> Curiosity Atelier. All Rights Reserved.
+                      </p>
+                      <p class="footer__credits">
+                          Inspired by curiosity & code.
+                      </p>
+                  </div>
+              </div>
+          </footer>
+      
+          <script>
+              // Simple script to set current year in footer
+              document.getElementById('currentYear').textContent = new Date().getFullYear();
+          </script>
+          <!-- <script src="main.js"></script> --> <!-- Your main JS file if you have one -->
+      
+      <!-- Other sections will go here -->
+    </main>
+</body>
+</html>

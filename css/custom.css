@@ -1,0 +1,1289 @@
+/* ==================== GOOGLE FONTS ==================== */
+/* Imported in HTML via <link> */
+
+/* ==================== CSS VARIABLES ==================== */
+:root {
+  --header-height: 3.5rem;
+
+  /* Colors - NEW PALETTE */
+  --accent-color: #ff8e3c; /* Button Background */
+  --accent-color-alt: #e67e30; /* Darker orange for hover */
+  
+  --title-color: #0d0d0d;    /* Headline */
+  --text-color: #2a2a2a;     /* Paragraph */
+  --button-text-color: #0d0d0d; /* Button Text */
+
+  --body-bg-color: #eff0f3;       /* Background */
+  --container-bg-color: #FFFFFF;  /* For header, cards if they are on body-bg */
+  --card-bg-color: #FFFFFF;       /* For profile card and stat cards */
+  
+  --text-color-light: #777777; /* For less important text, can adjust */
+  --border-color: #E0E0E0;     /* For dividers, borders */
+  --white-color: #FFFFFF;      /* Explicit white for text on dark backgrounds */
+
+
+/* --- Custom Scrollbar Styles --- */
+
+/* For WebKit Browsers (Chrome, Safari, Edge, Opera) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2a2a2a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff8e3c; /* Your orange color */
+  border-radius: 10px;
+  border: 2px solid #2a2a2a; /* Creates padding around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff8e3c; /* Darker orange on hover */
+}
+
+/* For Firefox */
+/* Apply to html for global scrollbar, or to specific elements */
+html {
+  scrollbar-width: thin; /* Options: 'auto', 'thin', 'none' */
+  scrollbar-color: #ff8e3c #2a2a2a; /* thumb color, track color */
+}
+
+  /* Typography */
+  --body-font: 'Poppins', sans-serif;
+  --heading-font: 'Poppins', sans-serif;
+  --code-font: 'Roboto Mono', monospace;
+
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 1.75rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+
+  --font-light: 300;
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /* Spacing */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  /* Box Shadow */
+  --box-shadow-light: 0 2px 8px rgba(0,0,0,0.08);
+  --box-shadow-medium: 0 4px 12px rgba(0,0,0,0.1);
+
+  /* Border Radius */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem; /* For cards */
+  --border-radius-pill: 50px; /* For buttons */
+
+  /* Z-index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+/* ==================== REUSABLE CSS CLASSES (Add/Update) ==================== */
+.card-styled {
+  background-color: var(--container-bg-color); /* White background for cards */
+  padding: 2rem 1.5rem; /* Default padding for cards */
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow-medium);
+  position: relative; /* For quotes or other positioned elements inside */
+}
+
+.section__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-2-5);
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  margin: 0; /* Remove default margins if any */
+  white-space: nowrap; /* Prevent title from wrapping if space is tight with line */
+}
+
+.section__header-line {
+  flex-grow: 1;
+  height: 1px;
+  background-image: linear-gradient(to right, var(--border-color) 50%, transparent 50%);
+  background-size: 8px 1px; /* Adjust for dot size and spacing */
+  margin: 0 var(--mb-1);
+  opacity: 0.7;
+}
+
+.section__number {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  font-weight: var(--font-semi-bold);
+}
+
+
+/* ==================== OUR PHILOSOPHY SECTION ==================== */
+.philosophy.section { /* Increase specificity if needed */
+  /* Add any specific padding for this section if default is not enough */
+}
+
+.philosophy__content {
+  /* padding: 2.5rem; If different from .card-styled */
+  text-align: center; /* Center the paragraph and quotes */
+}
+
+.philosophy__content p {
+  font-size: var(--normal-font-size);
+  line-height: 1.7;
+  color: var(--text-color);
+  margin: 1rem 0; /* Space around the paragraph */
+  max-width: 700px; /* Constrain line length for readability */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.philosophy__quote {
+  font-size: 3rem; /* Large quote marks */
+  color: var(--accent-color); /* Use accent color for quotes */
+  font-weight: var(--font-bold);
+  line-height: 1;
+  display: block; /* Or inline-block if preferred for flow */
+}
+
+.philosophy__quote--start {
+  text-align: left;
+  margin-bottom: -0.5em; /* Pull paragraph up slightly */
+  padding-left: 1rem; /* Align with text block */
+}
+
+.philosophy__quote--end {
+  text-align: right;
+  margin-top: -0.5em; /* Pull paragraph down slightly or adjust as needed */
+  padding-right: 1rem; /* Align with text block */
+}
+
+
+/* ==================== VISUAL JOURNEYS (YOUTUBE) SECTION ==================== */
+.video-showcase.section {
+  /* Add any specific padding for this section */
+}
+
+.video-showcase__link {
+  display: block; /* Make the <a> tag a block container */
+  overflow: hidden; /* Ensure rounded corners clip the image */
+  position: relative; /* For positioning the overlay */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.video-showcase__link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+.video-showcase__link:hover .video-showcase__play-button {
+  transform: scale(1.1); /* Slight zoom on play button */
+}
+
+
+.video-showcase__thumbnail {
+  width: 100%;
+  height: auto;
+  display: block; /* Remove any extra space below image */
+  border-radius: var(--border-radius-lg); /* Match parent's rounded corners if not already handled by overflow:hidden */
+}
+
+.video-showcase__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius-lg); /* Match parent if link itself isn't rounding */
+  opacity: 1;
+  transition: background-color 0.3s ease;
+}
+.video-showcase__link:hover .video-showcase__overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.video-showcase__play-button {
+  width: 80px; /* Adjust size as needed */
+  height: 80px;
+  background-color: var(--accent-color);
+  border-radius: 50%; /* Make it circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--button-text-color); /* Text color for the play icon */
+  font-size: 2rem; /* Size of the play icon */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.video-showcase__link:hover .video-showcase__play-button {
+  background-color: var(--accent-color-alt);
+}
+
+/* Responsive typography */
+@media screen and (min-width: 992px) {
+  :root {
+      --h1-font-size: 3.5rem;
+      --h2-font-size: 2rem;
+      --h3-font-size: 1.5rem;
+      --normal-font-size: 1.125rem;
+      --small-font-size: 0.938rem;
+      --smaller-font-size: 0.875rem;
+  }
+}
+
+/* ==================== BASE ==================== */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-bg-color);
+  color: var(--text-color); /* Default paragraph color */
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--title-color); /* Headline color */
+  font-weight: var(--font-semi-bold);
+  font-family: var(--heading-font);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color); /* Default link color, can be overridden */
+}
+a:hover {
+  color: var(--accent-color-alt);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==================== REUSABLE CSS CLASSES ==================== */
+.section {
+  padding: 4rem 0 1.5rem; /* Top, bottom, and left/right padding */
+}
+
+.container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* --- UPDATED BUTTON STYLES --- */
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.75rem;
+  border-radius: var(--border-radius-pill);
+  font-weight: var(--font-semi-bold);
+  transition: background-color .3s, border-color .3s, color .3s;
+  border: 2px solid transparent;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button--primary {
+  background-color: var(--accent-color);
+  color: var(--button-text-color);
+  border-color: var(--accent-color);
+}
+.button--primary:hover {
+  background-color: var(--accent-color-alt);
+  border-color: var(--accent-color-alt);
+  color: var(--button-text-color);
+}
+
+/* If you need an outline button style */
+.button--outline {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+.button--outline:hover {
+  background-color: var(--accent-color);
+  color: var(--button-text-color); /* Or --white-color if on dark bg */
+}
+
+.button__icon {
+  margin-left: var(--mb-0-5);
+}
+
+/* ==================== HEADER & NAV ==================== */
+.header {
+  width: 100%;
+  background-color: var(--container-bg-color); /* White background for header */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05); /* Softer shadow on light bg */
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+  font-size: 1.25rem;
+}
+.nav__logo:hover {
+  color: var(--accent-color);
+}
+
+.nav__list {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.nav__link {
+  color: var(--text-color); /* Nav links use paragraph color */
+  font-weight: var(--font-semi-bold);
+  transition: color .3s;
+  font-size: var(--small-font-size);
+  text-transform: uppercase;
+}
+
+.nav__link:hover,
+.nav__link.active-link {
+  color: var(--accent-color); /* Active/hover uses accent */
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.theme-toggle {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius-sm);
+  /* background-color: var(--body-bg-color); Removed, let it be transparent on header */
+}
+.theme-toggle:hover {
+  color: var(--accent-color);
+}
+
+.nav__button { /* This is .button.button--primary */
+  padding: 0.6rem 1.2rem; 
+  font-size: var(--small-font-size);
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+  padding-top: calc(var(--header-height) + 2rem);
+  padding-bottom: 4rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero__container {
+  grid-template-columns: 320px 1fr;
+  align-items: stretch;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Profile Card (Left Column) */
+.hero__sidebar {
+  background-color: var(--card-bg-color); /* White card */
+  padding: 2rem 1.5rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--box-shadow-medium);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-card__image-container {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--mb-1);
+  border: 4px solid var(--accent-color); /* Accent border */
+}
+
+.profile-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-card__name {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-0-25);
+  color: var(--title-color);
+}
+
+.profile-card__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  margin-bottom: var(--mb-1);
+}
+
+.profile-card__divider {
+  border: 0;
+  height: 1px;
+  background-color: var(--border-color);
+  width: 80%;
+  margin: var(--mb-1-5) auto;
+}
+
+.profile-card__socials {
+  display: flex;
+  justify-content: center;
+  gap: var(--mb-1);
+  margin-bottom: var(--mb-1);
+}
+
+.profile-card__social-link {
+  font-size: 1.25rem;
+  color: var(--text-color-light);
+  transition: color 0.3s;
+}
+.profile-card__social-link:hover {
+  color: var(--accent-color);
+}
+
+.profile-card__info {
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-2);
+  text-align: left;
+  width: 100%;
+}
+.profile-card__info li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mb-0-5);
+  color: var(--text-color);
+}
+.profile-card__info li span:first-child {
+  font-weight: var(--font-semi-bold);
+  color: var(--title-color);
+  margin-right: var(--mb-0-5);
+}
+
+.profile-card__contact-btn { /* This is .button.button--primary */
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Hero Main Content (Right Column) */
+.hero__main-content {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://img.freepik.com/free-vector/pixel-art-mystical-background_52683-87349.jpg?t=st=1746642222~exp=1746645822~hmac=cef1a42439101e692b2442317bf6a76ec4e151c29042fad189c3f8acfd49e57d&w=1380');
+  background-size: cover;
+  background-position: center; /* You might want to adjust this */
+  border-radius: var(--border-radius-lg);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  color: var(--white-color); /* This makes text white. CHECK READABILITY! */
+}
+
+/* Blog Page Specific Hero Main Content Background */
+.hero__main-content--blog-page {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://img.freepik.com/free-vector/pixel-art-rural-landscape-background_52683-125379.jpg?t=st=1746646721~exp=1746650321~hmac=c54112b59f4176ff0de7e7b31a6209e6fe09083b6186c4ad7bab0f92a894e739&w=1380');
+}
+
+.hero__greeting {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-0-75);
+  color: var(--white-color); /* White text on dark background */
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero__title {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--mb-1-5);
+  line-height: 1.2;
+  color: var(--white-color); /* White text on dark background */
+}
+
+.hero__cta-btn { /* This is .button.button--primary */
+  /* Styles inherited from .button and .button--primary */
+  padding: 0.9rem 2rem; /* Can have specific padding if needed */
+}
+
+
+/* Stats Cards */
+.hero__stats {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+
+.stat-card {
+  background-color: var(--card-bg-color); /* White card */
+  padding: 1.5rem 1rem;
+  border-radius: var(--border-radius-md);
+  text-align: center;
+  box-shadow: var(--box-shadow-light);
+  color: var(--text-color); /* Default text color for label */
+}
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--box-shadow-medium);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card__number {
+  font-size: var(--h2-font-size);
+  color: var(--accent-color); /* Accent color for numbers */
+  font-weight: var(--font-bold);
+  margin-bottom: var(--mb-0-25);
+}
+
+.stat-card__label {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+  text-transform: uppercase;
+  font-weight: var(--font-semi-bold);
+}
+
+
+/* ==================== RESPONSIVENESS (largely unchanged from previous) ==================== */
+@media screen and (max-width: 992px) {
+  .container {
+      margin-left: 1rem;
+      margin-right: 1rem;
+  }
+  .hero__container {
+      grid-template-columns: 280px 1fr;
+      gap: 1.5rem;
+  }
+  .hero__main-content {
+      padding: 2rem;
+  }
+  .hero__stats {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+      padding: 4rem 0 1rem;
+  }
+  .nav__menu { /* Hide full menu on mobile for now */
+      display: none;
+  }
+  .nav__actions .nav__button { /* Hide nav button on small mobile by default */
+      display: none; 
+  }
+  .hero {
+      padding-top: calc(var(--header-height) + 1rem);
+      min-height: auto;
+  }
+  .hero__container {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+  }
+  .hero__sidebar {
+      padding: 1.5rem;
+      order: 2;
+  }
+  .hero__main-content {
+      padding: 2rem 1.5rem;
+      min-height: 60vh;
+      order: 1;
+  }
+  .hero__title {
+      font-size: 2rem;
+  }
+  .hero__stats {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding-top: 1.5rem;
+  }
+  .stat-card {
+      padding: 1rem;
+  }
+  .hero__scroll-down {
+     display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero__title {
+      font-size: 1.8rem;
+  }
+  .stat-card__number {
+      font-size: var(--h3-font-size);
+  }
+  .nav__logo {
+      font-size: 1rem;
+  }
+  .theme-toggle {
+      font-size: 1rem;
+  }
+}
+
+/* Update Section Header for button alignment */
+.section__header--with-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Key for title left, button right */
+  margin-bottom: var(--mb-2-5);
+}
+
+.section__header--with-button .section__title {
+  margin-right: var(--mb-1); /* Add some space before the line if line is kept */
+}
+
+/* If you keep the line and want it to shrink: */
+.section__header--with-button .section__header-line {
+  flex-grow: 1; /* Takes remaining space */
+  /* margin-left: var(--mb-1);
+  margin-right: var(--mb-1); */
+}
+/* If you remove the line when button is present, you might not need the above for line */
+
+
+.funsies__show-more-btn {
+  font-size: var(--small-font-size);
+  padding: 0.4rem 1rem; /* Smaller padding for this type of button */
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  white-space: nowrap; /* Prevent button text from wrapping */
+}
+.funsies__show-more-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--button-text-color);
+}
+
+
+/* ==================== FUNSIES SECTION (MINI GAMES) ==================== */
+.funsies__grid {
+  display: grid;
+  gap: 1.5rem; /* Gap between cards */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+}
+
+/* Reusing/Defining .service-card styles (if not already fully defined) */
+/* Make sure .card-styled provides background, padding, border-radius, box-shadow */
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Align text to the left within cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Slightly more pronounced shadow on hover */
+}
+
+.service-card__icon-wrapper {
+  margin-bottom: var(--mb-1);
+  /* Optional: if you want a background circle/square for the icon */
+  /* background-color: var(--accent-color-light); 
+     width: 60px; height: 60px; border-radius: 50%; 
+     display: flex; align-items: center; justify-content: center; */
+}
+
+.service-card__icon {
+  font-size: 2.5rem; /* Adjust icon size */
+  color: var(--accent-color); /* Icon color */
+  margin-bottom: var(--mb-0-5); /* If icon is directly above title without wrapper */
+}
+
+.service-card__title {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-0-75);
+}
+
+.service-card__description {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: var(--mb-1-5);
+  flex-grow: 1; /* Allows description to take up space, pushing link to bottom */
+}
+
+.service-card__link {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--accent-color);
+  text-transform: uppercase;
+  display: inline-flex; /* Use flex to align text and icon */
+  align-items: center;
+  margin-top: auto; /* Pushes link to the bottom of the card */
+  transition: color 0.3s;
+}
+.service-card__link:hover {
+  color: var(--accent-color-alt);
+}
+.service-card__link i {
+  margin-left: var(--mb-0-5);
+  transition: transform 0.3s ease;
+}
+.service-card__link:hover i {
+  transform: translateX(4px); /* Slight arrow movement on hover */
+}
+
+/* Responsive adjustments for Funsies grid if needed */
+@media screen and (min-width: 768px) {
+  .funsies__grid {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for tablets and wider */
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /* For desktop, you could go to 3 or 4 columns if desired, 
+     but auto-fit often handles it well. This is an example for 4. */
+  /* .funsies__grid {
+      grid-template-columns: repeat(4, 1fr);
+  } */
+}
+
+/* ==================== PROFESSOR QUINTON INTRO / TESTIMONIAL CARD STYLE ==================== */
+.quinton-intro.section {
+  /* Any specific padding if needed */
+}
+
+.testimonial-card { /* This class will style the card for Prof. Quinton */
+  text-align: center; /* Center content within the card */
+  /* .card-styled already provides background, padding, border-radius, box-shadow */
+}
+
+.testimonial-card__image-wrapper {
+  width: 100px; /* Adjust size as needed */
+  height: 100px;
+  border-radius: 50%; /* Circular image */
+  overflow: hidden;
+  margin: 0 auto var(--mb-1-5); /* Center horizontally, margin below */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Subtle shadow for the image */
+  border: 3px solid var(--accent-color); /* Accent color border, like profile card */
+}
+
+.testimonial-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-card__name {
+  font-size: var(--h3-font-size); /* Or var(--h2-font-size) if more prominent */
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--mb-0-25);
+}
+
+.testimonial-card__role {
+  font-size: var(--normal-font-size);
+  color: var(--accent-color); /* Using accent color like 'Interior designer' in example */
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-1-5);
+}
+
+.testimonial-card__quote {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  line-height: 1.7;
+  max-width: 750px; /* Constrain line length for readability */
+  margin: 0 auto; /* Center the blockquote if it's narrower than card */
+  font-style: normal; /* Remove default italic from blockquote if not desired */
+}
+
+.testimonial-card__quote p {
+  margin-bottom: 0; /* Remove default p margin if blockquote handles spacing */
+}
+
+/* In custom.css */
+
+/* Profile card image centering fix (if not already applied correctly) */
+.hero__sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.profile-card__image-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- LATEST POSTS (BLOG) SECTION --- */
+.posts__show-more-btn { /* Style similar to funsies__show-more-btn */
+  font-size: var(--small-font-size);
+  padding: 0.4rem 1rem;
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  white-space: nowrap;
+}
+.posts__show-more-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--button-text-color);
+}
+
+.posts__grid {
+  display: grid;
+  gap: 1.5rem;
+  /* Default to 1 column, then adjust for wider screens */
+  grid-template-columns: 1fr; 
+}
+
+@media screen and (min-width: 768px) {
+  .posts__grid {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+  }
+}
+/*
+@media screen and (min-width: 992px) {
+  .posts__grid {
+      grid-template-columns: repeat(3, 1fr); // Example for 3 columns on desktop
+  }
+}
+*/
+
+.post-card { /* .card-styled provides base */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Ensure image corners adhere to card radius */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.post-card__image-link {
+  display: block;
+  width: 100%;
+  /* Optional: Set a fixed aspect ratio for images if desired */
+  /* aspect-ratio: 16 / 10; */ 
+  overflow: hidden;
+}
+
+.post-card__image {
+  width: 100%;
+  height: 100%; /* Fill aspect-ratio container if set */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.post-card:hover .post-card__image {
+  transform: scale(1.05); /* Slight zoom on image hover */
+}
+
+.post-card__content {
+  padding: var(--mb-1-5); /* Padding inside the content area below image */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card__category {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+  text-transform: uppercase;
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-0-5);
+}
+
+.post-card__title {
+  font-size: 1.35rem; /* Slightly larger than h3 default */
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--mb-1);
+  line-height: 1.3;
+}
+.post-card__title a {
+  color: inherit; /* Inherit title color */
+  text-decoration: none;
+}
+.post-card__title a:hover {
+  color: var(--accent-color);
+}
+
+.post-card__meta {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+  margin-top: auto; /* Push meta to bottom of content area */
+  padding-top: var(--mb-1);
+  border-top: 1px dotted var(--border-color); /* Dotted line above meta */
+}
+
+.post-card__meta-divider {
+  margin: 0 0.5em;
+}
+
+/* --- FOOTER SECTION --- */
+.footer {
+  background-color: var(--container-bg-color); /* Or a slightly darker shade of body-bg */
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  color: var(--text-color);
+  border-top: 1px solid var(--border-color);
+}
+
+.footer__container {
+  /* container class provides max-width and padding */
+}
+
+.footer__content {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: var(--mb-2-5);
+}
+
+.footer__info {
+  flex-basis: 100%; /* Full width on small screens */
+}
+@media screen and (min-width: 768px) {
+  .footer__info {
+      flex-basis: calc(60% - 1rem); /* Adjust basis as needed */
+  }
+}
+
+.footer__logo {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-1);
+  font-weight: var(--font-bold);
+}
+
+.footer__description {
+  margin-bottom: var(--mb-1);
+  line-height: 1.6;
+  max-width: 450px; /* Limit width for readability */
+}
+
+.footer__contact-email a {
+  color: var(--accent-color);
+  font-weight: var(--font-semi-bold);
+}
+.footer__contact-email a:hover {
+  text-decoration: underline;
+}
+
+.footer__socials {
+  flex-basis: 100%; /* Full width on small screens */
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .footer__socials {
+      flex-basis: calc(35% - 1rem); /* Adjust basis as needed */
+      text-align: right; /* Align socials to the right on larger screens */
+  }
+}
+
+
+.footer__socials-title {
+  font-size: var(--normal-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-1);
+}
+
+.footer__social-link {
+  font-size: 1.5rem; /* Icon size */
+  color: var(--text-color-light);
+  margin-left: var(--mb-1); /* Space between icons (adjust if text-align: right then margin-right) */
+  transition: color 0.3s;
+}
+.footer__social-link:first-child {
+  margin-left: 0;
+}
+.footer__social-link:hover {
+  color: var(--accent-color);
+}
+/* For "Soon" links if you uncomment them */
+.footer__social-link--soon {
+  opacity: 0.6;
+  cursor: default;
+}
+.footer__social-link--soon:hover {
+  color: var(--text-color-light); /* Keep original color */
+}
+
+
+.footer__bottom {
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--mb-1-5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.footer__copyright {
+  margin-bottom: var(--mb-0-5); /* Space for wrapping */
+}
+
+.footer__credits {
+  text-align: right;
+}
+.footer__credits a {
+  color: var(--accent-color);
+  font-weight: var(--font-semi-bold);
+}
+.footer__credits a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 576px) {
+  .footer__content,
+  .footer__bottom {
+      flex-direction: column;
+      text-align: center;
+  }
+  .footer__socials,
+  .footer__credits {
+      text-align: center;
+      margin-top: var(--mb-1);
+  }
+  .footer__social-link {
+      margin: 0 var(--mb-0-5); /* Adjust spacing for centered icons */
+  }
+  .footer__credits {
+      margin-top: var(--mb-0-5);
+  }
+}
+
+/* ==================== CONTACT SECTION ==================== */
+.contact.section {
+  padding: 0; /* Remove default section padding as contact__bg will handle it */
+}
+
+.contact__bg {
+  background-color: #1a1a1a; /* Dark background - adjust as desired. Could be var(--title-color) if it's very dark */
+  padding: 4rem 0; /* Vertical padding for the dark section */
+  color: var(--white-color); /* Default text color for this section */
+}
+
+.contact__container {
+  /* grid is already applied via .grid class */
+  grid-template-columns: 1fr; /* Default to 1 column for mobile */
+  gap: 3rem; /* Gap between left content and form */
+}
+
+@media screen and (min-width: 768px) {
+  .contact__container {
+      grid-template-columns: 0.8fr 1.2fr; /* Adjust ratio for left and right columns */
+      align-items: center; /* Vertically align items if heights differ */
+  }
+}
+
+.contact__content-left {
+  text-align: left;
+}
+
+.contact__small-title {
+  color: var(--accent-color); /* Your orange color */
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: var(--mb-0-75);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact__headline {
+  font-size: var(--h1-font-size); /* Large headline */
+  color: var(--white-color); /* White text on dark bg */
+  font-weight: var(--font-bold);
+  line-height: 1.2;
+  margin-bottom: var(--mb-2);
+}
+
+.contact__socials {
+  display: flex;
+  gap: var(--mb-1-5);
+  margin-top: var(--mb-1-5);
+}
+
+.contact__social-link {
+  font-size: 1.5rem; /* Adjust icon size */
+  color: var(--white-color);
+  opacity: 0.8;
+  transition: opacity 0.3s, color 0.3s;
+}
+.contact__social-link:hover {
+  opacity: 1;
+  color: var(--accent-color);
+}
+
+/* --- Contact Form Styling --- */
+.contact__form {
+  display: grid;
+  gap: 1.5rem; /* Gap between form groups */
+}
+
+.contact__form-group {
+  position: relative;
+}
+
+.contact__form-group input,
+.contact__form-group textarea {
+  width: 100%;
+  padding: 0.75rem 0.25rem 0.5rem; /* Adjust padding, especially bottom for the line */
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Light underline */
+  color: var(--white-color); /* Text color for input */
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  outline: none;
+  transition: border-bottom-color 0.3s;
+}
+
+.contact__form-group textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 80px;
+}
+
+.contact__form-group label {
+  position: absolute;
+  top: 0.75rem; /* Align with input padding-top */
+  left: 0.25rem;
+  color: rgba(255, 255, 255, 0.7); /* Lighter label color */
+  font-size: var(--normal-font-size);
+  pointer-events: none; /* Allow clicks to pass through to input */
+  transition: top 0.3s, font-size 0.3s, color 0.3s;
+}
+
+/* Floating label effect */
+.contact__form-group input:focus + label,
+.contact__form-group input:not(:placeholder-shown) + label,
+.contact__form-group textarea:focus + label,
+.contact__form-group textarea:not(:placeholder-shown) + label {
+  top: -0.75rem; /* Move label up */
+  font-size: var(--small-font-size);
+  color: var(--accent-color); /* Change color on focus/filled */
+}
+
+.contact__form-group input:focus,
+.contact__form-group textarea:focus {
+  border-bottom-color: var(--accent-color); /* Highlight underline on focus */
+}
+
+/* For side-by-side fields (First Name, Last Name) */
+@media screen and (min-width: 576px) { /* Or 768px depending on preference */
+  .contact__form {
+      grid-template-columns: 1fr 1fr; /* Two columns */
+  }
+  .contact__form-group:nth-child(3), /* Email */
+  .contact__form-group:nth-child(4), /* Subject */
+  .contact__form-group:nth-child(5), /* Message */
+  .contact__submit-btn {             /* Button */
+      grid-column: 1 / -1; /* Span full width */
+  }
+}
+
+.contact__submit-btn {
+  /* Uses .button and .button--primary styles */
+  /* You can add specific styles here if needed */
+  justify-self: start; /* Align button to the left if form is grid */
+  padding: 0.9rem 2.5rem;
+}
+.contact__submit-btn:hover {
+  /* Hover styles from .button--primary */
+}
+
+/* Hero Stats - Blog Categories specific styling */
+.hero__stats--blog-categories {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust minmax for desired size */
+  gap: 1.5rem; /* Or var(--mb-1-5) */
+  margin-top: 2rem; /* Or auto to push to bottom */
+}
+
+.stat-card--blog-category { /* Style for the clickable category cards */
+  text-decoration: none; /* Remove underline from <a> tag */
+  color: var(--title-color); /* Default text color */
+  background-color: rgba(255, 255, 255, 0.9); /* Same as original stat-card or adjust */
+  padding: 1.5rem;
+  border-radius: var(--border-radius-md);
+  text-align: center;
+  box-shadow: var(--box-shadow-light);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.stat-card--blog-category:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--box-shadow-medium);
+  background-color: var(--white-color); /* Slightly brighter on hover */
+}
+
+.stat-card--blog-category .stat-card__title-main {
+  font-size: 1.35rem; /* Or var(--h3-font-size) */
+  color: var(--accent-color); /* Use accent for category title */
+  font-weight: var(--font-bold);
+  margin-bottom: var(--mb-0-5);
+}
+
+.stat-card--blog-category .stat-card__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.blog-archive-title.section {
+  padding-top: 3rem; /* Adjust spacing */
+  padding-bottom: 1rem; /* Less space before the grid starts */
+}
+
+.blog-archive-title .section__header {
+  margin-bottom: 0; /* Remove bottom margin if grid starts immediately */
+}
